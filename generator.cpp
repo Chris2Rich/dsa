@@ -5,20 +5,26 @@
 #include <iostream>
 #include <math.h>
 
-std::string truepassword = "Test";
+int maxsize = 4;
+std::string password = "Test";
 
-bool checkpassword(std::string attempt){
-    return (attempt == truepassword);
+bool tester(std::string s){
+    return (s == password) ? true : false;
 }
 
-std::string passwordgenerator(int maxsize){
-    for(char i = 0; i < 256; i++){
+std::string cracker(){
+    std::string temp(maxsize,char(0));
+    char* ptr = temp.end()-1;
+    while(ptr != temp.begin() && temp[0] != char[256]){
+        if(tester(temp)){
+            return temp;
+        }
         
     }
-    return "";
 }
 
 int main(){
-    std::cout << pow(256, 125);
+    std::cout << cracker("");
+
     return 0;
 }
