@@ -13,7 +13,7 @@ bool tester(std::string s){
     return (s == password) ? true : false;
 }
 
-void increment(std::string* s, int itr){
+inline void increment(std::string* s, int itr){
     if(s->operator[](itr) != cmax){
         s->operator[](itr)++;
     }

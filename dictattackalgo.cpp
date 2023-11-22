@@ -15,7 +15,7 @@ bool tester(std::vector<std::string*> s){
     return (ans == password) ? true : false;
 }
 
-void increment(std::vector<std::string*>* s, int itr){
+inline void increment(std::vector<std::string*>* s, int itr){
     if(*s->operator[](itr) != dictionary[dictionary.size()-1]){
         s->operator[](itr)++;
     }
