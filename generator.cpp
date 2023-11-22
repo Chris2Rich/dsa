@@ -14,17 +14,19 @@ bool tester(std::string s){
 
 std::string cracker(){
     std::string temp(maxsize,char(0));
-    char* ptr = temp.end()-1;
-    while(ptr != temp.begin() && temp[0] != char[256]){
+    auto ptr = temp.end()-1;
+    while(ptr != temp.begin() && temp[0] != char(256)){
         if(tester(temp)){
             return temp;
         }
-        
+        if(temp[temp.size()-1] != char(256)){
+            
+        }
     }
 }
 
 int main(){
-    std::cout << cracker("");
+    std::cout << cracker();
 
     return 0;
 }
