@@ -5,8 +5,8 @@
 #include <iostream>
 #include <math.h>
 
-int maxsize = 3;
-std::string password = "ABC";
+int maxsize = 4;
+std::string password = "Tefu";
 
 bool tester(std::string s){
     return (s == password) ? true : false;
