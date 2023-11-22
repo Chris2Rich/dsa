@@ -1,38 +1,41 @@
 #include <string>
 #include <vector>
-#include <future>
 #include <thread>
 #include <iostream>
-#include <math.h>
 
-int maxsize = 4;
-std::string password = "Tefu";
+int maxsize = 3;
+std::string password = "tef";
+
+signed char cmax(255);
+signed char cmin(0);
 
 bool tester(std::string s){
     return (s == password) ? true : false;
 }
 
 void increment(std::string* s, int itr){
-    if(s->operator[](itr) != char(255)){
+    if(s->operator[](itr) != cmax){
         s->operator[](itr)++;
     }
     else{
-        s->operator[](itr) = char(0);
+        s->operator[](itr) = cmin;
         increment(s, itr+1);
     }
 }
 
 std::string cracker(){
-    std::string temp(maxsize, char(0));
-    std::string limit(maxsize, char(255));
+    std::string temp(maxsize, cmin);
+    std::string limit(maxsize, cmax);
     
     while(temp != limit){
         
         if(tester(temp)){
             return temp;
         }
-        if(temp[temp.size()-1] != char(255)){
-            increment(&temp,0);
+        else{
+            if(temp[temp.size()-1] != cmax){
+                increment(&temp,0);
+            }
         }
     }
     
