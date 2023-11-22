@@ -33,9 +33,7 @@ std::string cracker(){
             return temp;
         }
         else{
-            if(temp[temp.size()-1] != cmax){
-                increment(&temp,0);
-            }
+            increment(&temp,0);
         }
     }
     
