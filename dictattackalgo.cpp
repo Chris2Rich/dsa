@@ -3,9 +3,9 @@
 #include <thread>
 #include <iostream>
 
-int wordcount = 3;
-std::string password = "ascammertest";
-std::vector<std::string> dictionary {"a","scammer","brain","fart","test","eat"};
+int wordcount = 5;
+std::string password = "ascammertestaearthwax";
+std::vector<std::string> dictionary {"identification","earthwax","a","scammer","revolutionary","brain","fart","test","eat","responsibility"};
 
 bool tester(std::vector<std::string*> s){
     std::string ans = "";
